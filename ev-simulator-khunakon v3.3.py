@@ -85,9 +85,9 @@ while st.session_state.running:
     # --- Update speed ---
     acc_input = 0
     if accelerate:
-        acc_input += 2
+        acc_input += 10
     if brake:
-        acc_input -= 3
+        acc_input -= 10
     st.session_state.v += acc_input * dt
     st.session_state.v = max(0, min(st.session_state.v, max_speed/3.6))
     
@@ -128,3 +128,4 @@ while st.session_state.running:
         st.session_state.running = False
         st.success("✅ Simulation ended!")
         break
+
