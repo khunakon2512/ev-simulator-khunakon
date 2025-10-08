@@ -94,7 +94,7 @@ if run_sim:
         
         # --- Update UI ---
         img = create_car_image(positions[-1])
-        road_placeholder.image(img, use_column_width=True)
+      road_placeholder.image(img, use_container_width=True)
         
         metrics_placeholder.metric("Speed (km/h)", f"{v*3.6:.1f}")
         metrics_placeholder.metric("Battery (kWh)", f"{battery:.2f}")
@@ -109,3 +109,4 @@ if run_sim:
             break
     
     st.success("✅ Simulation Ended!")
+
